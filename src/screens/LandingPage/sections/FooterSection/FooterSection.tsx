@@ -28,11 +28,11 @@ export const FooterSection = (): JSX.Element => {
           <div className="flex flex-col gap-8">
             <div className="flex items-center gap-3.5">
               <img className="w-[60px] h-10 max-[480px]:w-[30px]"  alt="Logo" src="/logo-2.svg" />
-              <div className="[font-family:'Bw_Gradual_DEMO-Medium',Helvetica] font-medium text-white text-2xl">
+              <div className="font-text-lg-medium text-white text-2xl">
                 Zerra
               </div>
             </div>
-            <p className="font-normal text-[#7a7a7a] text-lg leading-[27px] max-w-[231px] [font-family:'Manrope',Helvetica] max-[480px]:text-[16px]">
+            <p className="font-text-lg-regular text-[#7a7a7a] text-lg leading-[27px] max-w-[231px] max-[480px]:text-[16px]">
               2020 Massachusetts Ave NW, Washington, DC 20036
             </p>
           </div>
@@ -45,7 +45,7 @@ export const FooterSection = (): JSX.Element => {
                 <a
                   key={linkIndex}
                   href="#"
-                  className="[font-family:'Manrope',Helvetica] font-medium text-white text-base  hover:text-gray-300 transition-colors max-[480px]:text-[16px]"
+                  className="font-text-sm-medium text-white text-base  hover:text-gray-300 transition-colors max-[480px]:text-[16px]"
                 >
                   {link}
                 </a>
@@ -56,14 +56,14 @@ export const FooterSection = (): JSX.Element => {
 
           {/* Newsletter Subscription */}
           <div className="flex flex-col gap-[50px]">
-            <h3 className="w-[174px] [font-family:'Manrope',Helvetica] font-medium text-white text-2xl max-[480px]:text-[20px] max-[800px]:w-[250px]">
+            <h3 className="w-[174px] font-text-lg-medium text-white text-2xl max-[480px]:text-[20px] max-[800px]:w-[250px]">
               Subscribe Our Newsletter
             </h3>
             <div className="flex flex-col gap-2.5">
               <div className="flex items-center justify-between w-full">
                 <Input
                   placeholder="Email Address"
-                  className="border-none bg-transparent text-[#7a7a7a] placeholder:text-[#7a7a7a] [font-family:'Manrope',Helvetica] font-medium text-base focus-visible:ring-0 p-0 h-auto max-[480px]:text-[16px]"
+                  className="border-none bg-transparent text-[#7a7a7a] placeholder:text-[#7a7a7a] font-text-sm-medium text-base focus-visible:ring-0 p-0 h-auto max-[480px]:text-[16px]"
                 />
                 <button className="flex items-center justify-center">
                   <ArrowUpRightIcon className="w-[30px] h-[30px] text-white" />
@@ -78,19 +78,19 @@ export const FooterSection = (): JSX.Element => {
         <div className="mt-10">
           <Separator className="bg-[#7a7a7a] h-px w-full opacity-50 mb-10" />
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
-            <div className="[font-family:'Manrope',Helvetica] font-normal text-[#7a7a7a] text-lg max-[480px]:text-[16px]">
+            <div className="font-text-lg-regular text-[#7a7a7a] text-lg max-[480px]:text-[16px]">
               @2023 Zerra. All rights reserved
             </div>
             <div className="flex gap-8 mt-4 md:mt-0 max-[360px]:flex-col max-[360px]:gap-2">
               <a
                 href="#"
-                className="[font-family:'Manrope',Helvetica] font-normal text-[#7a7a7a] text-lg hover:text-gray-300 transition-colors max-[480px]:text-[16px]"
+                className="font-text-lg-regular text-[#7a7a7a] text-lg hover:text-gray-300 transition-colors max-[480px]:text-[16px]"
               >
                 Terms &amp; Condditions
               </a>
               <a
                 href="#"
-                className="[font-family:'Manrope',Helvetica] font-normal text-[#7a7a7a] text-lg hover:text-gray-300 transition-colors max-[480px]:text-[16px]"
+                className="font-text-lg-regular text-[#7a7a7a] text-lg hover:text-gray-300 transition-colors max-[480px]:text-[16px]"
               >
                 Privacy Policy
               </a>

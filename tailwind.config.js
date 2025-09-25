@@ -21,6 +21,7 @@ module.exports = {
         "text-xl-medium": "var(--text-xl-medium-font-family)",
         "text-xl-semibold": "var(--text-xl-semibold-font-family)",
         sans: [
+          "Manrope",
           "ui-sans-serif",
           "system-ui",
           "sans-serif",

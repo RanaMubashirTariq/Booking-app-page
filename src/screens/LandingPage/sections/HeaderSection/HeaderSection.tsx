@@ -69,7 +69,7 @@ export const HeaderSection = (): JSX.Element => {
             {/* Logo */}
             <div className="flex items-center gap-3.5">
               <img className="w-[60px] h-10 max-[480px]:w-[30px]"  alt="Logo" src="/logo-2.svg" />
-              <div className="font-medium text-white text-2xl [font-family:'Bw_Gradual_DEMO-Medium',Helvetica] max-[480px]:text-[20px]">
+              <div className="font-text-lg-medium text-white text-2xl max-[480px]:text-[20px]">
                 Zerra
               </div>
             </div>
@@ -79,10 +79,10 @@ export const HeaderSection = (): JSX.Element => {
               {navigationItems.map((item) => (
                 <div
                   key={item.name}
-                  className={`$${
+                  className={`${
                     item.active
-                      ? "font-text-base-bold text-white"
-                      : "font-text-base-medium text-[#d7d7d7]"
+                      ? "font-text-sm-bold text-white"
+                      : "font-text-sm-medium text-[#d7d7d7]"
                   } text-[length:var(--text-sm-medium-font-size)] tracking-[var(--text-sm-medium-letter-spacing)] leading-[var(--text-sm-medium-line-height)] cursor-pointer hover:text-white transition-colors`}
                 >
                   {item.name}
@@ -127,7 +127,7 @@ export const HeaderSection = (): JSX.Element => {
                 </button>
                 <div className="flex items-center gap-3.5 mb-8">
                   <img className="w-[60px] h-10" alt="Logo" src="/logo-2.svg" />
-                  <div className="font-medium text-[#191818] text-2x5[font-family:'Bw_Gradual_DEMO-Medium',Helvetica]">
+                  <div className="font-text-lg-medium text-[#191818] text-2xl">
                     Zerra
                   </div>
                 </div>
@@ -135,7 +135,7 @@ export const HeaderSection = (): JSX.Element => {
                   {navigationItems.map((item) => (
                     <div
                       key={item.name}
-                      className={`$${
+                      className={`${
                         item.active
                           ? "font-text-lg-bold text-[#191818]"
                           : "font-text-lg-medium text-[#7a7a7a]"
