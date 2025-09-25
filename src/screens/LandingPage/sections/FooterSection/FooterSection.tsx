@@ -7,15 +7,30 @@ import { Separator } from "../../../../components/ui/separator";
 const footerLinks = [
   {
     title: "Rooms",
-    links: ["Rooms", "Facilities", "Offers", "Wedding"],
+    links: [
+      { label: "Rooms", href: "#facilities" },
+      { label: "Facilities", href: "#facilities" },
+      { label: "Offers", href: "#rating" },
+      { label: "Wedding", href: "#rating" },
+    ],
   },
   {
     title: "About",
-    links: ["About", "Blog", "Careers", "Location"],
+    links: [
+      { label: "About", href: "#rating" },
+      { label: "Blog", href: "#blog" },
+      { label: "Careers", href: "#rating" },
+      { label: "Location", href: "#home" },
+    ],
   },
   {
     title: "Social",
-    links: ["Inatagram", "Twitter", "YouTube", "TikTok"],
+    links: [
+      { label: "Instagram", href: "#home" },
+      { label: "Twitter", href: "#home" },
+      { label: "YouTube", href: "#home" },
+      { label: "TikTok", href: "#home" },
+    ],
   },
 ];
 
@@ -44,10 +59,10 @@ export const FooterSection = (): JSX.Element => {
               {column.links.map((link, linkIndex) => (
                 <a
                   key={linkIndex}
-                  href="#"
+                  href={link.href}
                   className="font-text-sm-medium text-white text-base  hover:text-gray-300 transition-colors max-[480px]:text-[16px]"
                 >
-                  {link}
+                  {link.label}
                 </a>
               ))}
             </div>

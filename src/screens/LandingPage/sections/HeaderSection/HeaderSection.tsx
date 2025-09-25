@@ -11,13 +11,13 @@ import { Separator } from "../../../../components/ui/separator";
 
 // Define navigation items for reuse
 const navigationItems = [
-  { name: "Home", active: true },
-  { name: "Rooms", active: false },
-  { name: "Facilities", active: false },
-  { name: "Offers", active: false },
-  { name: "Wedding", active: false },
-  { name: "About", active: false },
-  { name: "Blog", active: false },
+  { name: "Home", href: "#home", active: true },
+  { name: "Rooms", href: "#facilities", active: false },
+  { name: "Facilities", href: "#facilities", active: false },
+  { name: "Offers", href: "#rating", active: false },
+  { name: "Wedding", href: "#rating", active: false },
+  { name: "About", href: "#rating", active: false },
+  { name: "Blog", href: "#blog", active: false },
 ];
 
 // Define search filter options
@@ -52,19 +52,20 @@ export const HeaderSection = (): JSX.Element => {
         {/* Background images */}
         <div className="relative h-[804px]  max-[767px]:h-[400px]  max-[1000px]:h-[600px] max-[800px]:h-[500px]">
           <img
-            className="absolute w-full h-full object-cover"
+            className="absolute w-full h-full object-cover z-0"
             alt="Background"
             src="/image-5.png"
           />
           <img
-            className="absolute w-full h-full bg-blend-color-burn opacity-40"
+            className="absolute w-full h-full opacity-20 z-0"
             alt="Noise texture"
             src="/noise.png"
           />
+          <div className="absolute inset-0 z-10 pointer-events-none bg-[linear-gradient(0deg,rgba(97,97,97,0.5),rgba(97,97,97,0.5)),linear-gradient(0deg,rgba(0,0,0,0.2),rgba(0,0,0,0.2))]"></div>
         </div>
 
         {/* Navigation bar */}
-        <nav className="absolute top-0 left-0 w-full py-8 px-6 md:px-12 z-20 max-[680px]:py-2">
+        <nav className="absolute  top-0 left-0 w-full py-8 px-6 md:px-12 z-50 max-[680px]:py-2">
           <div className="flex justify-between items-center max-w-[1216px] mx-auto">
             {/* Logo */}
             <div className="flex items-center gap-3.5">
@@ -77,16 +78,17 @@ export const HeaderSection = (): JSX.Element => {
             {/* Navigation links - desktop */}
             <div className="hidden lg:flex items-center gap-8 max-[1022px]:hidden">
               {navigationItems.map((item) => (
-                <div
+                <a
                   key={item.name}
+                  href={item.href}
                   className={`${
                     item.active
                       ? "font-text-sm-bold text-white"
                       : "font-text-sm-medium text-[#d7d7d7]"
-                  } text-[length:var(--text-sm-medium-font-size)] tracking-[var(--text-sm-medium-letter-spacing)] leading-[var(--text-sm-medium-line-height)] cursor-pointer hover:text-white transition-colors`}
+                  } text-[length:var(--text-sm-medium-font-size)] tracking-[var(--text-sm-medium-letter-spacing)] leading-[var(--text-sm-medium-line-height)] hover:text-white transition-colors`}
                 >
                   {item.name}
-                </div>
+                </a>
               ))}
             </div>
             <Button
@@ -133,16 +135,18 @@ export const HeaderSection = (): JSX.Element => {
                 </div>
                 <div className="flex flex-col gap-6">
                   {navigationItems.map((item) => (
-                    <div
+                    <a
                       key={item.name}
+                      href={item.href}
+                      onClick={() => setMobileMenuOpen(false)}
                       className={`${
                         item.active
                           ? "font-text-lg-bold text-[#191818]"
                           : "font-text-lg-medium text-[#7a7a7a]"
-                      } text-[length:var(--text-lg-medium-font-size)] tracking-[var(--text-lg-medium-letter-spacing)] leading-[var(--text-lg-medium-line-height)] cursor-pointer hover:text-[#191818] transition-colors`}
+                      } text-[length:var(--text-lg-medium-font-size)] tracking-[var(--text-lg-medium-letter-spacing)] leading-[var(--text-lg-medium-line-height)] hover:text-[#191818] transition-colors`}
                     >
                       {item.name}
-                    </div>
+                    </a>
                   ))}
                 </div>
                 <Button
@@ -162,13 +166,13 @@ export const HeaderSection = (): JSX.Element => {
         </nav>
 
         {/* Hero content */}
-        <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center px-4 sm:px-6 ">
+        <div className="absolute z-20 top-0 left-0 w-full h-full flex flex-col items-center justify-center px-4 sm:px-6 ">
           <div className="flex flex-col items-center gap-6 max-w-[1100px] w-full text-center">
             <h1
               className="font-display-2xl-medium text-white text-[56px] max-[1300px]:text-[44px] max-[1024px]:text-[36px] max-[768px]:text-[28px] max-[480px]:text-[22px] max-[375px]:text-[18px] font-bold tracking-tight leading-tight max-[768px]:leading-snug"
               style={{ wordBreak: 'break-word' }}
             >
-              Helping You Find The Most Comfortable Place
+              Helping You Find The Most <br/> Comfortable Place
             </h1>
             <p
               className="max-w-[687px] w-full font-text-lg-regular text-white text-[22px] max-[1300px]:text-[18px] max-[1024px]:text-[16px] max-[768px]:text-[15px] max-[480px]:text-[13px] max-[375px]:text-[12px] tracking-normal leading-relaxed mx-auto"
@@ -180,7 +184,7 @@ export const HeaderSection = (): JSX.Element => {
         </div>
 
         {/* Pagination dots */}
-        <div className="absolute bottom-[200px] left-1/2 transform -translate-x-1/2 flex items-start gap-2 max-[768px]:bottom-[120px] max-[480px]:bottom-[80px]">
+        <div className="absolute z-20 bottom-[200px] left-1/2 transform -translate-x-1/2 flex items-start gap-2 max-[768px]:bottom-[120px] max-[480px]:bottom-[80px]">
           <div className="w-10 h-2 bg-white rounded-[10px] max-[480px]:w-6 max-[480px]:h-1" />
           <div className="w-2 h-2 bg-white rounded opacity-40 max-[480px]:w-1.5 max-[480px]:h-1.5" />
           <div className="w-2 h-2 bg-white rounded opacity-40 max-[480px]:w-1.5 max-[480px]:h-1.5" />
@@ -190,7 +194,7 @@ export const HeaderSection = (): JSX.Element => {
 
         {/* Search card */}
         <Card
-          className="absolute bottom-[-50px] left-1/2 transform -translate-x-1/2 bg-white rounded-lg overflow-hidden shadow-lg max-w-[1216px] w-full mx-4
+          className="absolute z-20 bottom-[-50px] left-1/2 transform -translate-x-1/2 bg-white rounded-lg overflow-hidden shadow-lg max-w-[1216px] w-full mx-4
             max-[1300px]:max-w-[900px] max-[1300px]:p-2 max-[1300px]:text-[12px] max-[1300px]:rounded-md max-[1300px]:shadow-md max-[1000px]:hidden"
         >
           <CardContent

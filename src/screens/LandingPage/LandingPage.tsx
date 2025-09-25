@@ -8,21 +8,23 @@ import { RatingSection } from "./sections/RatingSection";
 
 export const LandingPage = (): JSX.Element => {
   // Partner logos data for the logo section
-  const partnerLogos = [
-    { id: 1, src: "/logo-1.svg", alt: "Logo" },
-    { id: 2, src: "/logo-1.svg", alt: "Logo" },
-    { id: 3, src: "/logo-1.svg", alt: "Logo" },
-    { id: 4, src: "/logo-1.svg", alt: "Logo" },
-    { id: 5, src: "/logo.svg", alt: "Logo" },
-  ];
+ 
 
   return (
     <div className="flex flex-col w-full">
       <HeaderSection />
-      <HeroSection />
-      <RatingSection />
-      <FacilitiesSection />
-      <BlogSection />
+      <section id="home">
+        <HeroSection />
+      </section>
+      <section id="rating">
+        <RatingSection />
+      </section>
+      <section id="facilities">
+        <FacilitiesSection />
+      </section>
+      <section id="blog">
+        <BlogSection />
+      </section>
       <FooterSection />
     </div>
   );
