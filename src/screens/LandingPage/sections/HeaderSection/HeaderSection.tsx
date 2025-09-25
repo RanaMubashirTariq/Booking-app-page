@@ -91,7 +91,7 @@ export const HeaderSection = (): JSX.Element => {
             </div>
             <Button
             
-              className="bg-transparent mt-1 min-[1000px]:flex items-center gap-[9px] px-[30px] py-[15px] text-white  rounded border border-white hover:bg-transparent/90  transition-colors max-[1000px]:hidden"
+              className="w-[163px] bg-transparent mt-1 min-[1000px]:flex items-center gap-[9px] px-[30px] py-[15px] text-white  rounded border border-white hover:bg-transparent/90  transition-colors max-[1000px]:hidden"
             >
               <span className="font-text-lg-medium text-[length:var(--text-lg-medium-font-size)] tracking-[var(--text-lg-medium-letter-spacing)] leading-[var(--text-lg-medium-line-height)]">
                 Contact
