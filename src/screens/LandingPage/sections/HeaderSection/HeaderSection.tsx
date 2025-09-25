@@ -81,8 +81,8 @@ export const HeaderSection = (): JSX.Element => {
                   key={item.name}
                   className={`$${
                     item.active
-                      ? "font-text-sm-bold text-white"
-                      : "font-text-sm-medium text-[#d7d7d7]"
+                      ? "font-text-base-bold text-white"
+                      : "font-text-base-medium text-[#d7d7d7]"
                   } text-[length:var(--text-sm-medium-font-size)] tracking-[var(--text-sm-medium-letter-spacing)] leading-[var(--text-sm-medium-line-height)] cursor-pointer hover:text-white transition-colors`}
                 >
                   {item.name}
@@ -90,13 +90,13 @@ export const HeaderSection = (): JSX.Element => {
               ))}
             </div>
             <Button
-              variant="outline"
-              className="mt-1 min-[1000px]:flex items-center gap-[9px] px-[30px] py-[15px] text-[#191818] border-[#191818] rounded hover:bg-[#191818]/10 transition-colors max-[1000px]:hidden"
+            
+              className="bg-transparent mt-1 min-[1000px]:flex items-center gap-[9px] px-[30px] py-[15px] text-white  rounded border border-white hover:bg-transparent/90  transition-colors max-[1000px]:hidden"
             >
               <span className="font-text-lg-medium text-[length:var(--text-lg-medium-font-size)] tracking-[var(--text-lg-medium-letter-spacing)] leading-[var(--text-lg-medium-line-height)]">
                 Contact
               </span>
-              <ArrowUpRightIcon className="h-6 w-6" />
+              <img src='/vector-arrow.png' className="h-6 w-6" />
             </Button>
 
             {/* Hamburger menu icon - mobile */}

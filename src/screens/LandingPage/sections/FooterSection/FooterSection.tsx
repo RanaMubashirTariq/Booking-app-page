@@ -23,7 +23,7 @@ export const FooterSection = (): JSX.Element => {
   return (
     <footer className="w-full bg-[#191818] py-20 max-[680px]:py-10">
       <div className="container mx-auto px-6 max-w-[1216px]">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+        <div className="flex justify-between max-[1000px]:flex-wrap gap-10">
           {/* Logo and Address */}
           <div className="flex flex-col gap-8">
             <div className="flex items-center gap-3.5">
@@ -38,23 +38,25 @@ export const FooterSection = (): JSX.Element => {
           </div>
 
           {/* Navigation Links */}
+          <div className="w-[380px] max-[767px]:w-[100%] max-[500px]:flex-wrap flex gap-20">
           {footerLinks.map((column, index) => (
             <div key={index} className="flex flex-col gap-8 max-[480px]:gap-2 ">
               {column.links.map((link, linkIndex) => (
                 <a
                   key={linkIndex}
                   href="#"
-                  className="[font-family:'Manrope',Helvetica] font-medium text-white text-base hover:text-gray-300 transition-colors max-[480px]:text-[16px]"
+                  className="[font-family:'Manrope',Helvetica] font-medium text-white text-base  hover:text-gray-300 transition-colors max-[480px]:text-[16px]"
                 >
                   {link}
                 </a>
               ))}
             </div>
           ))}
+          </div>
 
           {/* Newsletter Subscription */}
           <div className="flex flex-col gap-[50px]">
-            <h3 className="[font-family:'Manrope',Helvetica] font-medium text-white text-2xl max-[480px]:text-[20px] max-[800px]:w-[250px]">
+            <h3 className="w-[174px] [font-family:'Manrope',Helvetica] font-medium text-white text-2xl max-[480px]:text-[20px] max-[800px]:w-[250px]">
               Subscribe Our Newsletter
             </h3>
             <div className="flex flex-col gap-2.5">
