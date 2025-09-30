@@ -18,7 +18,7 @@ export const FacilitiesSection = (): JSX.Element => {
       title: "Gym Training Ground",
       description:
         "It is a long established fact that a reader will be distracted by the readable content of a page",
-      image: "/image-7.png",
+      image: "/image-7.jpg",
     },
     {
       id: "03",
@@ -48,7 +48,7 @@ export const FacilitiesSection = (): JSX.Element => {
     <div className="flex flex-col gap-10">
       {facilities.map((facility, index) => (
         <React.Fragment key={facility.id}>
-          <Separator className="w-full h-px bg-[#f3f3f3]" />
+          <Separator className="w-full h-px bg-[#cccccc]" />
           <div className="flex flex-col lg:flex-row gap-6 lg:gap-0">
             {/* Image */}
             <div className="w-full lg:w-[592px] h-[240px] sm:h-[300px] relative">
@@ -85,7 +85,7 @@ export const FacilitiesSection = (): JSX.Element => {
             </div>
           </div>
           {index === facilities.length - 1 && (
-            <Separator className="w-full h-px bg-[#f3f3f3]" />
+            <Separator className="w-full h-px bg-[#cccccc]" />
           )}
         </React.Fragment>
       ))}
@@ -93,7 +93,7 @@ export const FacilitiesSection = (): JSX.Element => {
 
     {/* Testimonial */}
     <div className="flex flex-col lg:flex-row  mt-40 gap-10 max-[1100px]:mt-20 max-[1100px]:mt-10">
-      <div className="flex flex-col items-start gap-6 sm:gap-10 w-full lg:max-w-[600px]  max-[1000px]:w-[100%]">
+      <div className="flex flex-col mt-[200px] max-[1000px]:mt-0 items-start gap-6 sm:gap-10 w-full lg:max-w-[600px]  max-[1000px]:w-[100%]">
         <span className="font-text-md-medium text-[#7a7a7a] text-[length:var(--text-md-medium-font-size)] tracking-[var(--text-md-medium-letter-spacing)] leading-[var(--text-md-medium-line-height)] max-[1300px]:text-[18px] max-[1024px]:text-[16px] max-[768px]:text-[15px] max-[480px]:text-[12px]">
           WHAT THEY SAID
         </span>
@@ -112,7 +112,7 @@ export const FacilitiesSection = (): JSX.Element => {
       </div>
       <div className="lg:ml-[128px] flex justify-center lg:justify-start w-full max[1100px]:ml-[80px]">
         <img
-          className="w-full max-w-full h-[300px] sm:h-[400px] lg:h-[594px] object-cover rounded-lg lg:rounded-none"
+          className="w-full max-w-full h-[300px] sm:h-[400px] lg:h-[594px] object-cover max-[1000px]:object-bottom-center rounded-lg lg:rounded-none"
           alt="Testimonial"
           src="/image-4.png"
         />
