@@ -75,10 +75,10 @@ export const FooterSection = (): JSX.Element => {
               Subscribe Our Newsletter
             </h3>
             <div className="flex flex-col gap-2.5">
-              <div className="flex items-center justify-between w-full">
+              <div className="flex items-center justify-between w-full ">
                 <Input
                   placeholder="Email Address"
-                  className="border-none bg-transparent text-[#7a7a7a] placeholder:text-[#7a7a7a] font-text-sm-medium text-base focus-visible:ring-0 p-0 h-auto max-[480px]:text-[16px]"
+                  className="border-none bg-transparent focus:bg-transparent focus-visible:bg-transparent text-[#7a7a7a] placeholder:text-[#7a7a7a] font-text-sm-medium text-base focus-visible:ring-0 p-0 h-auto max-[480px]:text-[14px]"
                 />
                 <button className="flex items-center justify-center">
                   <ArrowUpRightIcon className="w-[30px] h-[30px] text-white" />
