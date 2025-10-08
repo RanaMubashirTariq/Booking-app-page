@@ -32,7 +32,7 @@ export default function Marquee () {
           {/* Marquee Section */}
           <div className="relative w-full overflow-hidden">
             <div className="flex gap-[84px] max-[1020px]:gap-[50px] whitespace-nowrap animate-marquee">
-              {[...trustedCompanies, ...trustedCompanies].map((company, index) => (
+              {[...trustedCompanies, ...trustedCompanies ,...trustedCompanies, ...trustedCompanies , ...trustedCompanies].map((company, index) => (
                 <div
                   key={index}
                   className="flex items-center justify-between "
