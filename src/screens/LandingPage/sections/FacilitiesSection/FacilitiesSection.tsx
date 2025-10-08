@@ -30,7 +30,7 @@ export const FacilitiesSection = (): JSX.Element => {
   ];
 
   return (
-    <section className="w-full bg-neutral-50">
+    <section className="w-full bg-[#f4f4f4]">
   <div className="container mx-auto max-w-[1216px] px-6 sm:px-6 py-16  max-[680px]:py-10 ">
     {/* Header */}
     <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between mb-16 sm:mb-20 gap-6 sm:gap-8">
@@ -60,9 +60,9 @@ export const FacilitiesSection = (): JSX.Element => {
             </div>
 
             {/* Content */}
-            <div className="flex flex-col lg:flex-row lg:ml-8 gap-4 sm:gap-6 flex-1">
+            <div className="flex flex-col lg:flex-row  lg:ml-8 gap-4 sm:gap-6 flex-1">
               {/* Number */}
-              <div className="lg:w-[107px] flex lg:justify-start">
+              <div className="lg:w-[107px] flex lg:justify-start lg:mt-[10px]">
                 <span className="font-text-xl-medium text-[#191818] text-[length:var(--text-xl-medium-font-size)] tracking-[var(--text-xl-medium-letter-spacing)] leading-[var(--text-xl-medium-line-height)]">
                   {facility.id}
                 </span>
