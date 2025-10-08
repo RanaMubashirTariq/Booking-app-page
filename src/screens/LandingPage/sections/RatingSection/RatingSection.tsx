@@ -20,7 +20,7 @@ const statsData = [
 
 export const RatingSection = (): JSX.Element => {
   return (
-    <section className="w-full bg-[#191818] py-20">
+    <section className="w-full bg-[#191818] py-20 max-[1100px]:mt-[100px] max-[900px]:mt-[200px]  max-[800px]:mt-[300px] max-[500px]:mt-0">
       <div className="container mx-auto max-w-[1216px] px-7 flex max-[1142px]:flex-col flex-row items-start lg:items-center justify-between gap-10 max-[680px]:px-6">
         {/* Left side with heading and rating */}
         <div className="flex flex-col items-start gap-[30px] w-[402px] max-[1142px]:w-[100%] max-[1142px]:items-center">

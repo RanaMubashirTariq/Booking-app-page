@@ -28,10 +28,10 @@ const galleryImages = [
 
 export const HeroSection = (): JSX.Element => {
   return (
-    <section className="w-full bg-neutral-50 py-[120px] max-[800px]:py-[50px] ">
+    <section className="w-full bg-neutral-50 max-[1020px]:pt-[280px] max-[767px]:pt-[40px] max-[500px]:pt-[40px] py-[120px] max-[1100px]:py-[80px] max-[800px]:pb-[50px] ">
       <div className="container max-w-[1216px] mx-auto flex flex-col gap-[60px] max-[680px]:gap-[30px] max-[680px]:px-6">
         {/* Header content */}
-        <div className="flex flex-col md:flex-row items-start justify-between gap-8 max-[680px]:gap-2">
+        <div className="flex flex-col md:flex-row items-center max-[767px]:text-start justify-between gap-8 max-[680px]:gap-2">
           <h1 className="font-display-XL-medium text-[#191818] text-[length:var(--display-XL-medium-font-size)] tracking-[var(--display-XL-medium-letter-spacing)] leading-[var(--display-XL-medium-line-height)] max-w-[737px] max-[1100px]:text-[44px] max-[900px]:text-[36px] max-[768px]:text-[28px] max-[480px]:text-[24px]  font-bold tracking-tight leading-tight max-w-[737px] max-[900px]:max-w-full">
             Enjoy an unforgettable stay with the best charm
           </h1>
@@ -55,7 +55,7 @@ export const HeroSection = (): JSX.Element => {
         </div>
 
         {/* Image gallery */}
-        <div className="grid grid-cols-12 gap-4 h-[693px] max-[1100px]:h-[500px] max-[900px]:h-[400px] max-[768px]:h-[300px] max-[480px]:h-auto">
+        <div className="grid grid-cols-12 gap-4 h-[693px] max-[1100px]:h-[500px] max-[900px]:h-[400px] max-[768px]:h-[300px] max-[500px]:h-auto">
           {/* Desktop and tablet layout */}
           <div className="col-span-4 max-[768px]:col-span-12 max-[768px]:h-[180px] max-[480px]:h-[120px]">
             <img
