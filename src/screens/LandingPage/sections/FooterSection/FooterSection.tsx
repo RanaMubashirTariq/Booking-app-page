@@ -70,7 +70,7 @@ export const FooterSection = (): JSX.Element => {
           </div>
 
           {/* Newsletter Subscription */}
-          <div className="flex flex-col gap-[50px]">
+          <div className="flex flex-col gap-[50px] w-full max-w-[321px] max-[500px]:max-w-[220px] max-[1100px]:max-w-[250px]">
             <h3 className="w-[174px] font-text-lg-medium text-white text-2xl max-[480px]:text-[20px] max-[800px]:w-[250px]">
               Subscribe Our Newsletter
             </h3>
