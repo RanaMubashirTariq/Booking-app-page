@@ -240,7 +240,7 @@ export const HeaderSection = (): JSX.Element => {
           </SelectTrigger>
 
           {/* make dropdown content fixed width for Room type */}
-          <SelectContent className={`bg-white border shadow-md rounded-md ${filter.label === "Rooms" ? "w-[160px]" : ""}`}>
+          <SelectContent className={`bg-white border shadow-md rounded-md ${filter.label === "Rooms" ? " w-[150px] max-[1300px]:w-[120px] max-[1020px]:w-full" : ""}`}>
             {filter.label === "Room type" &&
               roomTypeOptions.map((item) => (
                 <SelectItem
