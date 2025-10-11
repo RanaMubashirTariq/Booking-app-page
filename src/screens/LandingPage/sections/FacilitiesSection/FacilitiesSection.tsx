@@ -95,7 +95,7 @@ export const FacilitiesSection = (): JSX.Element => {
 </div>
 
       {/* Testimonial */}
-      <div className="flex flex-col lg:flex-row  min-[1500px]:justify-end pl-[120px] max-[1400px]:pl-[80px] max-[1200px]:pl-[40px] max-[767px]:pl-[27px] max-[1200px]:pb-10 max-[1023px]:mt-0 max-[1023px]:pb-0 gap-10 mt-[-120px] pb-20">
+      <div className="flex flex-col lg:flex-row  min-[1500px]:justify-end pl-[120px] max-[1400px]:pl-[80px] max-[1200px]:pl-[40px] max-[767px]:pl-[27px] max-[1200px]:pb-10 max-[1023px]:mt-0  gap-10 mt-[-120px] pb-20">
       <div className="flex flex-col mt-[200px] max-[1000px]:mt-0 items-start gap-6 sm:gap-10 w-full lg:max-w-[600px]  max-[1000px]:w-[100%]">
         <span className="font-text-md-medium text-[#7a7a7a] text-[length:var(--text-md-medium-font-size)] tracking-[var(--text-md-medium-letter-spacing)] leading-[var(--text-md-medium-line-height)] max-[1300px]:text-[18px] max-[1024px]:text-[16px] max-[768px]:text-[15px] max-[480px]:text-[12px]">
           WHAT THEY SAID
