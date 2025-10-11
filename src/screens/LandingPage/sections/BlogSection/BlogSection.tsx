@@ -27,7 +27,7 @@ const blogPosts = [
 
 export const BlogSection = (): JSX.Element => {
   return (
-    <section className="w-full bg-neutral-50 py-16 max-[680px]:py-5">
+    <section className="w-full bg-[#fafafa] py-16 max-[680px]:py-5">
       <div className="container max-w-7xl mx-auto px-7 max-[680px]:px-6">
         <div className="flex justify-between items-center mb-10 max-[800px]:mb-2">
           <h2 className="font-display-lg-medium font-[number:var(--display-lg-medium-font-weight)] text-[#191818] text-[length:var(--display-lg-medium-font-size)] tracking-[var(--display-lg-medium-letter-spacing)] leading-[var(--display-lg-medium-line-height)] [font-style:var(--display-lg-medium-font-style)] max-[380px]:text-[24px]">

@@ -215,92 +215,95 @@ export const HeaderSection = (): JSX.Element => {
             className="flex flex-col lg:flex-row items-stretch p-0 max-[1300px]:p-2 max-[1024px]:p-4 max-[768px]:p-2 max-[480px]:p-1"
           >
             <div className="flex items-center justify-between max-[1020px]:grid max-[1020px]:grid-cols-2 max-[500px]:grid-cols-1 items-stretch flex-1 w-full">
-              {searchFilters.map((filter, index) => (
-                <React.Fragment key={filter.label}>
-                  <div
-                    className="flex flex-col justify-center px-8 py-6 lg:py-8 min-h-[120px] flex-1
-                      max-[1300px]:px-[16px] max-[1300px]:py-4 max-[1300px]:min-h-[100px]"
-                  >
-                    <div className="flex flex-col gap-2">
-                      <label
-                        className="font-text-lg-regular text-[#7a7a7a] text-[18px] max-[1300px]:text-[15px]"
-                      >
-                        {filter.label}
-                      </label>
-                      <Select>
-  <SelectTrigger className="border-0 p-0 h-auto shadow-none focus:ring-0 bg-transparent [&>svg]:hidden group">
-    <div className="flex items-center justify-between w-full text-[24px] leading-[150%] tracking-0 text-[#191818] font-Manrope font-semibold  max-[1300px]:text-[15px]">
-      <SelectValue
-        placeholder={filter.value}
-        className=""
-      />
-      {filter.icon}
-    </div>
-  </SelectTrigger>
-
-  <SelectContent className="bg-white border shadow-md rounded-md">
-    {filter.label === "Room type" &&
-      roomTypeOptions.map((item) => (
-        <SelectItem
-          key={item}
-          value={item}
-          className="cursor-pointer px-4 py-2 hover:bg-gray-100 text-[#191818] "
+            {searchFilters.map((filter, index) => (
+  <React.Fragment key={filter.label}>
+    <div
+      // make Room type column fixed width and non-flexing,
+      // keep others flexible
+      className={`flex flex-col justify-center px-8 py-6 lg:py-8 min-h-[120px] 
+        max-[1300px]:px-[16px] max-[1300px]:py-4 max-[1300px]:min-h-[100px] 
+        ${filter.label === "Rooms" ? "flex-none w-[210px] max-[1300px]:w-[160px] max-[1020px]:w-full" : "flex-1"}`}
+    >
+      <div className="flex flex-col gap-2">
+        <label
+          className="font-text-lg-regular text-[#7a7a7a] text-[18px] max-[1300px]:text-[15px]"
         >
-          {item}
-        </SelectItem>
-      ))}
+          {filter.label}
+        </label>
 
-    {filter.label === "Checkin" &&
-      checkInOptions.map((item) => (
-        <SelectItem
-          key={item}
-          value={item}
-          className="cursor-pointer px-4 py-2 hover:bg-gray-100 text-[#191818]"
-        >
-          {item}
-        </SelectItem>
-      ))}
+        <Select>
+          <SelectTrigger className="border-0 p-0 h-auto shadow-none focus:ring-0 bg-transparent [&>svg]:hidden group w-full">
+            <div className="flex items-center justify-between w-full text-[24px] leading-[150%] tracking-0 text-[#191818] font-Manrope font-semibold  max-[1300px]:text-[15px]">
+              <SelectValue placeholder={filter.value} className="" />
+              {filter.icon}
+            </div>
+          </SelectTrigger>
 
-    {filter.label === "Checkout" &&
-      checkOutOptions.map((item) => (
-        <SelectItem
-          key={item}
-          value={item}
-          className="cursor-pointer px-4 py-2 hover:bg-gray-100 text-[#191818]"
-        >
-          {item}
-        </SelectItem>
-      ))}
-
-    {filter.label === "Rooms" &&
-      roomCountOptions.map((item) => (
-        <SelectItem
-          key={item}
-          value={item}
-          className="cursor-pointer px-4 py-2 hover:bg-gray-100 text-[#191818]"
-        >
-          {item}
-        </SelectItem>
-      ))}
-  </SelectContent>
-</Select>
-
-                    </div>
-                  </div>
-                  {index < searchFilters.length - 1 && (
-                    <Separator
-                      orientation="vertical"
-                      className="h-[80px] my-auto bg-[#d3d3d3] hidden lg:block max-[1300px]:mx-1 max-[1020px]:hidden"
-                    />
-                  )}
-                  {index < searchFilters.length - 0 && (
-                    <Separator
-                      orientation="horizontal"
-                      className="w-full bg-[#d3d3d3] lg:hidden max-[1020px]:hidden "
-                    />
-                  )}
-                </React.Fragment>
+          {/* make dropdown content fixed width for Room type */}
+          <SelectContent className={`bg-white border shadow-md rounded-md ${filter.label === "Rooms" ? "w-[160px]" : ""}`}>
+            {filter.label === "Room type" &&
+              roomTypeOptions.map((item) => (
+                <SelectItem
+                  key={item}
+                  value={item}
+                  className="cursor-pointer px-4 py-2 hover:bg-gray-100 text-[#191818] "
+                >
+                  {item}
+                </SelectItem>
               ))}
+
+            {filter.label === "Checkin" &&
+              checkInOptions.map((item) => (
+                <SelectItem
+                  key={item}
+                  value={item}
+                  className="cursor-pointer px-4 py-2 hover:bg-gray-100 text-[#191818]"
+                >
+                  {item}
+                </SelectItem>
+              ))}
+
+            {filter.label === "Checkout" &&
+              checkOutOptions.map((item) => (
+                <SelectItem
+                  key={item}
+                  value={item}
+                  className="cursor-pointer px-4 py-2 hover:bg-gray-100 text-[#191818]"
+                >
+                  {item}
+                </SelectItem>
+              ))}
+
+            {filter.label === "Rooms" &&
+              roomCountOptions.map((item) => (
+                <SelectItem
+                  key={item}
+                  value={item}
+                  className="cursor-pointer px-4 py-2 hover:bg-gray-100 text-[#191818]"
+                >
+                  {item}
+                </SelectItem>
+              ))}
+          </SelectContent>
+        </Select>
+      </div>
+    </div>
+
+    {index < searchFilters.length - 1 && (
+      <Separator
+        orientation="vertical"
+        className="h-[80px] my-auto bg-[#d3d3d3] hidden lg:block max-[1300px]:mx-1 max-[1020px]:hidden"
+      />
+    )}
+    {index < searchFilters.length - 0 && (
+      <Separator
+        orientation="horizontal"
+        className="w-full bg-[#d3d3d3] lg:hidden max-[1020px]:hidden "
+      />
+    )}
+  </React.Fragment>
+))}
+
             </div>
             <div className="flex items-center justify-center p-8 lg:p-0 lg:pr-8 max-[1300px]:p-4">
               <Button

@@ -30,8 +30,9 @@ export const FacilitiesSection = (): JSX.Element => {
   ];
 
   return (
-    <section className="w-full bg-[#f4f4f4]">
-  <div className="container mx-auto max-w-[1216px] px-6 sm:px-6 py-16  max-[680px]:py-10 ">
+    <section className="w-full bg-[#fafafa]">
+<div className="w-full bg-[#f4f4f4] h-[1758px] max-[1023px]:h-auto">
+<div className="container mx-auto max-w-[1216px] px-6 sm:px-6 py-16  max-[680px]:py-10">
     {/* Header */}
     <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between mb-16 sm:mb-20 gap-6 sm:gap-8">
       <h2 className="font-display-lg-medium text-[#191818] text-[length:var(--display-lg-medium-font-size)] tracking-[var(--display-lg-medium-letter-spacing)] leading-[var(--display-lg-medium-line-height)] max-w-full lg:max-w-[556px] max-[480px]:text-[24px]">
@@ -90,9 +91,11 @@ export const FacilitiesSection = (): JSX.Element => {
         </React.Fragment>
       ))}
     </div>
+  </div>
+</div>
 
-    {/* Testimonial */}
-    <div className="flex flex-col lg:flex-row  mt-40 gap-10 max-[1100px]:mt-20 max-[1100px]:mt-10">
+      {/* Testimonial */}
+      <div className="flex flex-col lg:flex-row  min-[1500px]:justify-end pl-[120px] max-[1400px]:pl-[80px] max-[1200px]:pl-[40px] max-[767px]:pl-[27px] max-[1200px]:pb-10 max-[1023px]:mt-0 max-[1023px]:pb-0 gap-10 mt-[-120px] pb-20">
       <div className="flex flex-col mt-[200px] max-[1000px]:mt-0 items-start gap-6 sm:gap-10 w-full lg:max-w-[600px]  max-[1000px]:w-[100%]">
         <span className="font-text-md-medium text-[#7a7a7a] text-[length:var(--text-md-medium-font-size)] tracking-[var(--text-md-medium-letter-spacing)] leading-[var(--text-md-medium-line-height)] max-[1300px]:text-[18px] max-[1024px]:text-[16px] max-[768px]:text-[15px] max-[480px]:text-[12px]">
           WHAT THEY SAID
@@ -112,13 +115,12 @@ export const FacilitiesSection = (): JSX.Element => {
       </div>
       <div className="lg:ml-[128px] flex justify-center lg:justify-start w-full max[1100px]:ml-[80px]">
         <img
-          className="w-full max-w-full h-[300px] sm:h-[400px] lg:h-[594px] object-cover max-[1000px]:object-bottom-center rounded-lg lg:rounded-none"
+          className="min-[1500px]:max-w-[900px] w-full max-w-full h-[300px] sm:h-[400px] lg:h-[594px] object-cover max-[1000px]:object-bottom-center rounded-lg lg:rounded-none"
           alt="Testimonial"
           src="/image-4.png"
         />
       </div>
     </div>
-  </div>
 </section>
 
   );
